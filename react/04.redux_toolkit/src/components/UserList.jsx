@@ -7,8 +7,8 @@ const UserList = () => {
   const { users, loading, error } = useSelector((state) => state.user);
 
   useEffect(() => {
-    dispatch(fetchUsers());
-  }, [dispatch]);
+    dispatch(fetchUsers()); // api called function , benifit : jba mai call karungi to sirf yehi par update nai karega but jo funcitons useSelector use kar raha hai har jagah update kar dega 
+  }, [dispatch]); // // to dipatch the data , and useSelector will recieve it 
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;

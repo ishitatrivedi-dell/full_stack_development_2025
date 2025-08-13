@@ -12,16 +12,16 @@ export const fetchUsers = createAsyncThunk("user/fetchUsers", async () => {
 // Create user slice
 const userSlice = createSlice({
   name: "user",
-  initialState: {
-    users: [],
+  initialState: { // kahi par bhi kuch fetch karna hai this will be the process 
+    users: [], // araay ki length mention karni hai where you are importing this function 
     loading: false,
     error: null,
   },
-  reducers: {},
+  reducers: {}, // kis kis function mai kya kya change karna hai 
 
   extraReducers: (builder) => {
     builder
-      .addCase(fetchUsers.pending, (state) => {
+      .addCase(fetchUsers.pending, (state) => { // these are the functions as switch case
         state.loading = true;
       })
       .addCase(fetchUsers.fulfilled, (state, action) => {

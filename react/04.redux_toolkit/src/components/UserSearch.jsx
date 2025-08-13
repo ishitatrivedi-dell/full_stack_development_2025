@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 
 const UserSearch = () => {
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState(""); 
   const users = useSelector((state) => state.user.users);
 
   const filteredUsers = users.filter((user) =>

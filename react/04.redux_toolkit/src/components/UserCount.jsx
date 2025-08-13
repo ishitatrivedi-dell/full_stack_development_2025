@@ -1,9 +1,8 @@
-
 import React from "react";
 import { useSelector } from "react-redux";
 
 const UserCount = () => {
-  const userCount = useSelector((state) => state.user.users.length);
+  const userCount = useSelector((state) => state.user.users.length); // from userslice users: [] 
 
   return (
     <div>

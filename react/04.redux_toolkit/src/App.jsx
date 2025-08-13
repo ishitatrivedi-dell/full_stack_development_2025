@@ -3,6 +3,8 @@ import UserList from "./components/UserList";
 import UserTable from "./components/UserTable";
 import UserCount from "./components/UserCount";
 import UserSearch from "./components/UserSearch";
+import UserFetch from "./components/UserFunction";
+
 
 const App = () => {
   return (
@@ -12,6 +14,7 @@ const App = () => {
       <UserTable />
       <UserCount />
       <UserSearch />
+      <UserFetch/>
     </div>
   );
 };
