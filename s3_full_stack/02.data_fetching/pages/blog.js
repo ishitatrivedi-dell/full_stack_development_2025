@@ -28,6 +28,6 @@ export async function getStaticProps() {
       posts,
       time: new Date().toLocaleTimeString(),
     },
-    revalidate: 30, // ISR interval
+    revalidate: 15, // ISR interval
   };
 }
