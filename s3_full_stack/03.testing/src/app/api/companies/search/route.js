@@ -10,8 +10,13 @@ export async function GET(request) {
     const skill = url.searchParams.get('skill');
 
     const client = await clientPromise;
+<<<<<<< HEAD
     const db = client.db('assignment');
     const coll = db.collection('companies');
+=======
+    const db = client.db("workbook");          
+    const coll = db.collection("companies");  
+>>>>>>> 080aaff40936301487c94c67ac375ba7743f5e0f
 
     const filter = {};
     if (name) filter.name = { $regex: new RegExp(name, 'i') };

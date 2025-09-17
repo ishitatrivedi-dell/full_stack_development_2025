@@ -11,8 +11,14 @@ export async function GET(request, { params }) {
     }
 
     const client = await clientPromise;
+<<<<<<< HEAD
     const db = client.db('assignment');
     const coll = db.collection('companies');
+=======
+    const db = client.db("workbook");          
+    const coll = db.collection("companies");  
+
+>>>>>>> 080aaff40936301487c94c67ac375ba7743f5e0f
 
     const doc = await coll.findOne({ _id: new ObjectId(id) });
     if (!doc) return NextResponse.json({ error: 'Not found' }, { status: 404 });

@@ -22,8 +22,14 @@ async function main() {
   const client = new MongoClient(MONGODB_URI);
   try {
     await client.connect();
+<<<<<<< HEAD
     const db = client.db('assignment');
     const coll = db.collection('companies');
+=======
+    const db = client.db("workbook");          
+    const coll = db.collection("companies");  
+
+>>>>>>> 080aaff40936301487c94c67ac375ba7743f5e0f
 
     const count = await coll.countDocuments();
     if (count === 0) {
