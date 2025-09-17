@@ -1,7 +1,7 @@
 // scripts/seed.js
 const { MongoClient } = require('mongodb');
 
-const MONGODB_URI = 'mongodb+srv://test:test123@workbook.u49gdlr.mongodb.net/';
+const MONGODB_URI = 'mongodb+srv://ishitatrivedi2401:ishitatrivedi061106@cluster0.j2rs8.mongodb.net/';
 
 const seedDoc = {
   name: "Microsoft",
@@ -22,8 +22,8 @@ async function main() {
   const client = new MongoClient(MONGODB_URI);
   try {
     await client.connect();
-    const db = client.db();
-    const coll = db.collection('workbook');
+    const db = client.db('assignment');
+    const coll = db.collection('companies');
 
     const count = await coll.countDocuments();
     if (count === 0) {
